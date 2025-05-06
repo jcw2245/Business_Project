@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Surge_Demo</title>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      margin: 0;
+      padding-top: 250px;
+      font-family: 'Lora', serif;
+      background-color: #eaeaea;
+    }
+
+    /* --- Top Header (Nav + Title) --- */
+    .top-header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background-color: #b5c7c5;
+      z-index: 1001;
+      box-shadow: 0px 2px 4px #032533;
+    }
+
+    .navbar-content {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: relative;
+      padding: 0 20px;
+    }
+
+    .navbar-content ul {
+      margin: 0;
+      padding: 0;
+      list-style-type: none;
+      display: flex;
+    }
+
+    .navbar-content ul li {
+      position: relative;
+    }
+
+    .navbar-content ul li a {
+      display: block;
+      color: #032533;
+      text-align: center;
+      padding: 20px 30px;
+      text-decoration: none;
+      font-size: 1.2em;
+    }
+
+    .navbar-content ul li a:hover {
+      background-color: #d8e1e0;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #f0f7f6;
+      min-width: 180px;
+      box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+      top: 100%;
+      left: 0;
+      z-index: 1002;
+    }
+    .feature-text {
+  margin-left: 350px; 
+  font-family: 'Lora', serif;
+  font-size: 1.1em;
+  line-height: 1.6;
+}
+    .dropdown-content a {
+      color: #032533;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+      text-align: left;
+    }
+
+    .dropdown-content a:hover {
+      background-color: #d8e1e0;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    .search-bar {
+      display: flex;
+      align-items: center;
+    }
+
+    .search-bar input[type="text"] {
+      padding: 8px;
+      margin-right: 5px;
+      border: none;
+      border-radius: 4px;
+      font-size: 1em;
+    }
+
+    .search-bar button {
+      padding: 8px 12px;
+      background-color: #032533;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    .search-bar button:hover {
+      background-color: #1a4a5a;
+    }
+
+    .header-box {
+      text-align: center;
+      font-size: 5.5em;
+      font-weight: bold;
+      color: rgb(49, 87, 92);
+      padding: 30px 0 20px;
+    }
+
+    /* --- Alternating Content Boxes --- */
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      margin: 40px auto;
+      padding: 20px;
+      max-width: 1300px;
+      background-color: #f2f2f2;
+      border: 1px solid #ccc;
+    }
+
+    .text-box, .image-box {
+      flex: 1 1 48%;
+      padding: 20px;
+      box-sizing: border-box;
+    }
+
+    .text-box {
+      background-color: white;
+      border: 1px solid #ccc;
+      text-align: center;
+    }
+
+    .text-box h2 {
+      font-size: 2em;
+      font-weight: 700;
+      margin-bottom: 20px;
+    }
+
+    .text-box p {
+      font-size: 1.2em;
+      line-height: 1.6;
+    }
+
+    .image-box img {
+      width: 100%;
+      height: auto;
+      display: block;
+      border: 1px solid #ccc;
+      box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
+    }
+
+    .container:nth-child(even) {
+      flex-direction: row-reverse;
+    }
+
+    @media (max-width: 800px) {
+      .container {
+        flex-direction: column;
+      }
+
+      .text-box, .image-box {
+        flex: 1 1 100%;
+      }
+    }
+    .faq-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 20px;
+
+    }
+    .centered-image {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+  height: auto;
+}
+  </style>
+</head>
+<body>
+
+  <!-- Fixed Top Header -->
+  <div class="top-header">
+    <div class="navbar-content">
+      <ul>
+        <li class="dropdown"><a href="#">About The Company</a>
+          <div class="dropdown-content">
+            <a href="About.html">Our Mission</a>
+            <a href="Programs.html">Programs Offered</a>
+            <a href="aiRules.html">How Our AI Works and Guidelines</a>
+            <a href="Questions.html">FAQ</a>
+            <a href="contact.html">Contact</a>
+          </div>
+        </li>
+        <li class="dropdown"><a href="#">Advertising and Analytics</a>
+          <div class="dropdown-content">
+            <a href="ai.html">AI For Advertising</a>
+            <a href="tips_ads.html">Tips For Your Newsroom</a>
+            <a href="consultant.html">Contact Consultant</a>
+          </div>
+        </li>
+        <li class="dropdown"><a href="#">Journalistic Inquiries</a>
+          <div class="dropdown-content">
+            <a href="ai.html">AI For Journalism</a>
+            <a href="tips_news.html">Tips For Your Newsroom</a>
+            <a href="consultant.html">Contact Consultant</a>
+          </div>
+        </li>
+        <li><a href="local_data.html">Local Data</a></li>
+      </ul>
+
+      <form class="search-bar" action="#" method="get">
+        <input type="text" placeholder="Search..." name="search">
+        <button type="submit">Go</button>
+      </form>
+    </div>
+    <div class="header-box">SURGE</div>
+  </div>
+
+  <div class="faq-container">
+    <h1>Our AI Guidelines and How To Use</h1>
+    <h3>Our AI is to be used as a helpful tool in suggestions for your company. It will help analyze options of advertising, whether that be how to market yourself, how to be profitable or suggestions about what advertisement to use. It can also help with journalistic inquiries like how to collect local pitches, what your audience could be for a story and defining an angle.</h3>
+    <h3>Our AI is not to be used as something that makes the product or story for you, as this could lead to several problems. It is there for a suggestion to formulate ideas. If you are not liking the suggestions that the AI is giving or worried about the response, please contact your consultant. Your consultant will be able to look at the questions that you have asked AI, as this is to ensure that it is giving correct and accurate responses that are helpful to the client. This will also help if you have concerns about what the AI is proposing about your company. The AI is to have a tool that is accessible for suggestions and if something needs to be answered that the consultant could not get to at a certain time. At any point that you want to have communication with the consultant about the AI and its services, you can contact them. If you do not like the AI tools, the consultant can also be notified that you would like a more consultant-based experience. At any time that you are questioning how to use AI, the consultant can explain more about the guidelines and implications. If you are breaking a guideline listed above, the consultant will reach out to you with further details to ensure that this program is helpful to your company. </h3>
+
+    </div>
+    </body>
+    </html>
