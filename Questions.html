@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Surge_Demo</title>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      margin: 0;
+      padding-top: 250px;
+      font-family: 'Lora', serif;
+      background-color: #eaeaea;
+    }
+
+    /* --- Top Header (Nav + Title) --- */
+    .top-header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background-color: #b5c7c5;
+      z-index: 1001;
+      box-shadow: 0px 2px 4px #032533;
+    }
+
+    .navbar-content {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: relative;
+      padding: 0 20px;
+    }
+
+    .navbar-content ul {
+      margin: 0;
+      padding: 0;
+      list-style-type: none;
+      display: flex;
+    }
+
+    .navbar-content ul li {
+      position: relative;
+    }
+
+    .navbar-content ul li a {
+      display: block;
+      color: #032533;
+      text-align: center;
+      padding: 20px 30px;
+      text-decoration: none;
+      font-size: 1.2em;
+    }
+
+    .navbar-content ul li a:hover {
+      background-color: #d8e1e0;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #f0f7f6;
+      min-width: 180px;
+      box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+      top: 100%;
+      left: 0;
+      z-index: 1002;
+    }
+    .feature-text {
+  margin-left: 350px; 
+  font-family: 'Lora', serif;
+  font-size: 1.1em;
+  line-height: 1.6;
+}
+    .dropdown-content a {
+      color: #032533;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+      text-align: left;
+    }
+
+    .dropdown-content a:hover {
+      background-color: #d8e1e0;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    .search-bar {
+      display: flex;
+      align-items: center;
+    }
+
+    .search-bar input[type="text"] {
+      padding: 8px;
+      margin-right: 5px;
+      border: none;
+      border-radius: 4px;
+      font-size: 1em;
+    }
+
+    .search-bar button {
+      padding: 8px 12px;
+      background-color: #032533;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    .search-bar button:hover {
+      background-color: #1a4a5a;
+    }
+
+    .header-box {
+      text-align: center;
+      font-size: 5.5em;
+      font-weight: bold;
+      color: rgb(49, 87, 92);
+      padding: 30px 0 20px;
+    }
+
+    /* --- Alternating Content Boxes --- */
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      margin: 40px auto;
+      padding: 20px;
+      max-width: 1300px;
+      background-color: #f2f2f2;
+      border: 1px solid #ccc;
+    }
+
+    .text-box, .image-box {
+      flex: 1 1 48%;
+      padding: 20px;
+      box-sizing: border-box;
+    }
+
+    .text-box {
+      background-color: white;
+      border: 1px solid #ccc;
+      text-align: center;
+    }
+
+    .text-box h2 {
+      font-size: 2em;
+      font-weight: 700;
+      margin-bottom: 20px;
+    }
+
+    .text-box p {
+      font-size: 1.2em;
+      line-height: 1.6;
+    }
+
+    .image-box img {
+      width: 100%;
+      height: auto;
+      display: block;
+      border: 1px solid #ccc;
+      box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
+    }
+
+    .container:nth-child(even) {
+      flex-direction: row-reverse;
+    }
+
+    @media (max-width: 800px) {
+      .container {
+        flex-direction: column;
+      }
+
+      .text-box, .image-box {
+        flex: 1 1 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Fixed Top Header -->
+  <div class="top-header">
+    <div class="navbar-content">
+      <ul>
+        <li class="dropdown"><a href="#">About The Company</a>
+          <div class="dropdown-content">
+            <a href="#">Our Mission</a>
+            <a href="#">Programs Offered</a>
+            <a href="#">How Our AI Works and Guidelines</a>
+            <a href="#">FAQ</a>
+            <a href="#">Contact</a>
+          </div>
+        </li>
+        <li class="dropdown"><a href="#">Advertising and Analytics</a>
+          <div class="dropdown-content">
+            <a href="#">AI For Advertising</a>
+            <a href="#">Tips For Your Newsroom</a>
+            <a href="#">Contact Consultant</a>
+          </div>
+        </li>
+        <li class="dropdown"><a href="#">Journalistic Inquiries</a>
+          <div class="dropdown-content">
+            <a href="#">AI For Journalism</a>
+            <a href="#">Tips For Local Journalism</a>
+            <a href="#">Contact Consultant</a>
+          </div>
+        </li>
+        <li><a href="#">Local Data</a></li>
+      </ul>
+
+      <form class="search-bar" action="#" method="get">
+        <input type="text" placeholder="Search..." name="search">
+        <button type="submit">Go</button>
+      </form>
+    </div>
+    <div class="header-box">SURGE</div>
+  </div>
+      
+    <h1> Frequently Asked Questions </h1>
+
+    <h2>What is Surge?</h2>
+    <p>Surge is an AI-powered platform designed specifically for small and independent newsrooms. We help you optimize content strategy, audience engagement, and ad revenue through data-driven insights and automation tools. In turn, this allows us to help you forecast topic performance based on timing and audience interest and recommend strategies to grow. Our team helps you work smarter, not harder.</p>
+ 
+    <h2>Who is Surge for?</h2>
+    <p>Surge is built for:</p>
+    <ul>
+        <li>Independent and local news publishers</li>
+        <li>Small to mid-sized digital newsrooms looking to expand their data analytics without the overhead of a data team</li>
+        <li>Community media organizations looking to grow their audience and revenue</li>
+    </ul>
+
+    <h2>How does Surge help newsrooms increase ad revenue?</h2>
+    <p>Surge analyzes your content performance, audience behavior, and advertising trends to recommend:</p>
+    <ul>
+        <li>Optimal ad placements and formats</li>
+        <li>High-value content verticals for monetization</li>
+        <li>Audience segments with the most engagement and monetization potential</li>
+    </ul>
+    <p>We also surface sponsorship opportunities and programmatic ad insights tailored to your niche, existing audience, and location.</p>
+
+    <h2>Do I need technical skills to use Surge?</h2>
+    <p>Not at all! Surge is designed to be user-friendly with a clean, intuitive dashboard. No coding or analytics background is needed. We provide clear, actionable recommendations — not confusing charts.</p>
+
+    <h2>How is Surge different from Google Analytics or other tools?</h2>
+    <p>Unlike general-purpose analytics tools, Surge adapts and formulates solutions to reach your intended audience. Built by journalists for journalists, our tool provides specific industry insights that focus on revenue and strategy, not just traffic. We don’t just provide data, we tell you what to do with it.</p>
+
+    <h2>Will Surge write content for us?</h2>
+    <P>No - Surge is not a content generator. Our goal is to empower human journalists with strategic insights, not replace them. We support editorial decision-making, not automate it.</P>
+
+    <h2>How much does Surge cost?</h2>
+    <p>We offer tiered pricing based on your newsroom size and needs. Discounts and grants may be available for nonprofit or community-driven organizations. Get in touch for a custom quote.</p>
+
+    <h2>How do I get started?</h2>
+    <p>Just contact us or sign up for a free demo. We’ll walk you through setup and show how Surge can fit into your existing workflow.</p>
+
+</body>
+</html>
