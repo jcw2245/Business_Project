@@ -190,6 +190,32 @@
   margin: 0 auto;
   max-width: 100%;
   height: auto;}
+  .chatbot-button {
+  background-color: #032533;
+  color: white;
+  font-size: 2em; /* Bigger text */
+  font-weight: bold;
+  padding: 25px 60px; /* More padding */
+  border: none;
+  border-radius: 12px; /* More rounded */
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+  box-shadow: 3px 6px 15px rgba(0, 0, 0, 0.25);
+}
+
+.chatbot-button:hover {
+  background-color: #1a4a5a;
+}
+
+.chatbot-button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 75vh; /* Take up most of the screen */
+  text-align: center;
+}
+
+
   </style>
 </head>
 <body>
@@ -233,13 +259,12 @@
   </div>
 
 
-  <iframe 
-  src="https://your-chatbot.vercel.app" 
-  width="100%" 
-  height="600" 
-  style="border: none;"
-  title="Chatbot">
-</iframe>
+  <div class="chatbot-button-container">
+    <a href="https://chatgpt.com/g/g-681a951c9b708191b048a4b954411bfc-newsroom-ai-assistant" target="_blank" class="chatbot-button">
+      Launch AI Assistant
+    </a>
+  </div>
+  
 
 
     </div>
